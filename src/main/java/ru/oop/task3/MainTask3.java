@@ -39,9 +39,9 @@ public class MainTask3 {
      */
     public void moveTo(Person person,
                        Position destination, List<Vehicle> vehicleList) {
-        for (Vehicle vehicleImpl : vehicleList) {
-            person.walk(vehicleImpl.getPosition());
-            vehicleImpl.moveTo(destination);
+        for (Vehicle vehicle : vehicleList) {
+            person.walk(vehicle.getPosition());
+            vehicle.moveTo(person, destination);
         }
         person.walk(destination);
         assert person.getPosition() == destination;
