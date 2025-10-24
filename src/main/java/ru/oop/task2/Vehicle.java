@@ -9,5 +9,5 @@ public interface Vehicle extends Positioned {
     /**
      * Переместиться к указанной позиции
      */
-    void moveTo(Person person, Position position);
+    void moveTo(Person person, Position destination);
 }
