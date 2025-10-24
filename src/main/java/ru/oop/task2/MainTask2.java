@@ -31,11 +31,11 @@ public class MainTask2 {
      *
      * @param person      человек, который перемещается
      * @param destination пункт назначения
-     * @param vehicleImpl транспортное средство для перемещения
+     * @param vehicle транспортное средство для перемещения
      */
-    public void moveTo(Person person, Position destination, Vehicle vehicleImpl) {
-        person.walk(vehicleImpl.getPosition());
-        vehicleImpl.moveTo(destination);
+    public void moveTo(Person person, Position destination, Vehicle vehicle) {
+        person.walk(vehicle.getPosition());
+        vehicle.moveTo(person, destination);
         person.walk(destination);
         assert person.getPosition() == destination;
     }
